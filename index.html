@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puresight</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/all.css"/>    
+</head>
+<body  class="px-lg-2" >
+  <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed z-3 w-100 bg-opacity-75">
+    <div class="container-fluid ps-4">
+        <img style="width: 50px; height: 50px;" class="img-fluid me-3" src="Images/logo2.png" alt="logo">
+        <a class="navbar-brand fs-4" href="#">PureSight</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active fs-5" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-5" href="#">Services</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link  dropdown-toggle fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Departments
+                    </a>
+                    <ul class="dropdown-menu p-1" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item fs-5 mt-2" href="#">Ophthalmology</a></li>
+                        <li><a class="dropdown-item fs-5 mt-2" href="#">Pediatric Care</a></li>
+                        <li><a class="dropdown-item fs-5 mt-2" href="#">Retina Services</a></li>
+                        <li><a class="dropdown-item fs-5 mt-2" href="#">Refractive Surgery</a></li>
+                        <li><a class="dropdown-item fs-5 mt-2" href="#">Glaucoma</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-capitalize fs-5" href="#">Other Departments</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled fs-5" href="#" tabindex="-1" aria-disabled="true">Connect</a>
+                </li>
+            </ul>
+            <form class="d-flex flex-column flex-lg-row">
+                <input class="form-control me-2 fs-5 mb-2 mb-lg-0" type="search" placeholder="Search" aria-label="Search">
+                <div class="d-flex flex-lg-row">
+                    <button class="btn fs-5 mb-2 mb-lg-0 me-3" type="submit">Search</button>
+                    <button class="btn fs-5" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!-- Modal -->
+<div class="logmodal modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header mb-4">
+                <h5 class="modal-title fs-3" id="loginModalLabel">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <form>
+                    <div class="mb-4">
+                        <label for="email" class="form-label fs-5">Email Address</label>
+                        <input type="email" class="form-control" id="email" required>
+                        <p>We will never share your email with anyone else.</p>
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="form-label fs-5">Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <div class="form-check form-switch mb-4">
+                        <input class="form-check-input" id="rememberme" type="checkbox">
+                        <label class="form-check-label" for="rememberme">Remember Me</label>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn fs-5">Login</button>
+                        <button type="button" class="btn fs-5" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //////////////////////////////// -->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 4"></button>
+    
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Images/close-up-eye-scanning.jpg" style="height: 97vh;" class="img-fluid d-block w-100" alt="...">
+        <div class="carousel-caption  d-md-block  ">
+          <h5 class="fw-medium display-6 text-uppercase">comprehensive eye care</h5>
+          <p class="fs-5">Our commitment to your eye health starts here</p>
+        <button class="btn text-dark  text-capitalize fs-5"> explore our service</button>
+        </div>
+      </div>
+      <!-- ///////////////// -->
+      <div class="carousel-item">
+        <img src="Images/man.jpg" style="height: 97vh;"  class="img-fluid d-block w-100" alt="...">
+        <div class="carousel-caption  d-md-block">
+          <h5 class="fw-medium display-6 text-uppercase">accurate eye equipment</h5>
+          <p class="fs-5">We use the latest technology to examin your vision</p>
+        <button class="btn text-dark text-capitalize fs-5 "> learn more</button>
+        </div>
+      </div>
+      <!-- ///////////// -->
+      <div class="carousel-item">
+        <img src="Images/glasses.jpg" style="height: 97vh;"  class="img-fluid d-block w-100" alt="...">
+        <div class="carousel-caption  d-md-block">
+          <h5 class="fw-medium display-6 text-uppercase">wide range of eyewear</h5>
+          <p class="fs-5">We offer a selection that suits your needs</p>
+        <button class="btn text-dark text-capitalize fs-5 "> browse our collection</button>
+         </div>
+      </div>
+        <!-- ///////////// -->
+        <div class="carousel-item">
+          <img src="Images/fam.jpg" style="height: 97vh;"  class="img-fluid d-block w-100" alt="...">
+          <div class="carousel-caption  d-md-block">
+            <h5 class="fw-medium display-6 text-uppercase">care for your whole familly</h5>
+            <p class="fs-5">Eye care for you and your loved ones</p>
+          <button class="btn text-dark text-capitalize fs-5 "> appointment</button>
+           </div>
+        </div>
+     <!-- ///////////// -->
+     <div class="carousel-item">
+      <img src="Images/lens.jpg" style="height: 97vh;"  class="img-fluid d-block w-100" alt="...">
+      <div class="carousel-caption  d-md-block">
+        <h5 class="fw-medium display-6 text-uppercase">high quality contact lenses</h5>
+        <p class="fs-5">Experience comfort and clarify with our lenses</p>
+      <button class="btn text-dark text-capitalize fs-5 "> learn more</button>
+       </div>
+    </div>
+     <!-- ///////////// -->
+     <div class="carousel-item">
+      <img src="Images/clin.jpg" style="height: 97vh;"  class="img-fluid d-block w-100" alt="...">
+      <div class="carousel-caption  d-md-block">
+        <h5 class="fw-medium display-6 text-uppercase">your visit matters to us</h5>
+        <p class="fs-5">Exceptional service in a comfortable setting</p>
+      <button class="btn text-dark  text-capitalize fs-5 "> schedule your visit </button>
+       </div>
+    </div>
+ 
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+     <!-- ///////////////////////// -->
+     <section id="welcome" class="rounded-2 pb-4 border-start border-bottom border-1  ">
+      <div class="container-fluid ">
+          <div class="row px-3 welcome rounded-3 shadow-lg py-5 border-start border-bottom border-2">
+              <div class="col-md-8 ">
+                  <h4 class="display-4 fw-medium">Welcome to Our Clinic</h4>
+                  <p class="fs-4 mt-3 h4">Experience quality care with a personalized approach tailored to your needs.</p>
+                  <a href="#learn-more" class="btn  fs-4 mt-4">Learn More</a>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- ///////////////// -->
+  <section class="border-1 border-start border-bottom py-4  rounded-2 ">
+<h2 class="container-fluid text-center  rounded-4   fw-bold display-4 p-5"> Eye Care Services</h2>
+<div class="accordion pb-3 border-1" id="accordionExample">
+  <div class="accordion-item  mt-3">
+    <h2 class="accordion-header shadow-lg " id="headingOne">
+      <button class="accordion-button fs-3"  type="button"  data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Comprehensive Eye Exam
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body h5">
+        We provide thorough eye examinations to assess your vision and ensure optimal eye health. Our tests include vision acuity checks and intraocular pressure assessments.</div>
+    </div>
+  </div>
+  <div class="accordion-item mt-3">
+    <h2 class="accordion-header shadow-lg" id="headingTwo">
+      <button class="accordion-button collapsed fs-3" type="button"  data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Vision Correction
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body h5">
+        Our clinic offers a variety of innovative solutions for vision correction, including prescription glasses, contact lenses, and advanced treatment options to improve your eyesight.     </div>
+    </div>
+  </div>
+  <div class="accordion-item mt-3">
+    <h2 class="accordion-header shadow-lg " id="headingThree">
+      <button class="accordion-button collapsed fs-3" type="button"  data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Preventative Eye Health
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body h5">
+        We are committed to educating our patients on preventative eye health. Our consultations cover essential tips and advice to help you avoid common eye conditions, such as glaucoma and retinal diseases.     </div>
+    </div>
+  </div>
+</div>  
+</section>
+<!-- //////////////// -->
+ <section class="write border-1 border-start border-bottom py-4  rounded-2 ">
+  <h2 class=" rounded-4 p-5  fw-bold  text-center text-capitalize display-4">appointment booking</h2>
+<div class="container-fluid p-3 border-start border-bottom border-3 rounded-3">
+<p>  <span class=" text-dark fs-3">Write a convenient appointement</span>
+<a class="text-decoration-none fs-3 text-capitalize text-secondary ms-1" href="#"> press here</a></p>
+<span data-bs-toggle="tooltip" title="Send a request!" data-bs-placement="right" data-bs-trigger="hover" data-bs-offset="5,10">
+<span data-bs-toggle="popover"  data-bs-content="sent!" data-bs-placement="right" data-bs-trigger="focus" data-bs-offset="5,10">
+  <button type="button" class="btn fs-4 mb-4" data-bs-toggle="modal" data-bs-target="#myModal">
+    Send Request
+  </button>
+</span>
+</span>
+
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Send Successfully</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body fs-4 text-capitalize">
+        your request has been sent successfully
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn  fs-3" data-bs-dismiss="modal">ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+<textarea class="container-fluid  form-control  fs-4 rounded-3 ps-4" rows="5" placeholder="write an appointment" id="comment" name="text"></textarea>
+</div>
+ </section>
+ <!-- /////////////////////////// -->
+ <section class="write border-1 border-start border-bottom py-4  rounded-2 ">
+  <h2 class=" rounded-4 p-5  fw-bold  text-center text-capitalize display-4">inquiries about examination</h2>
+<div class="container-fluid p-3 border-start border-bottom border-3 rounded-3">
+<p>  <span class=" text-dark fs-3">Write your inquiry</span>
+<a class="text-decoration-none fs-3 text-capitalize text-secondary" href="#"> press here</a></p>
+<span data-bs-toggle="tooltip" title="Send a request!" data-bs-placement="right" data-bs-trigger="hover" data-bs-offset="5,10">
+  <span data-bs-toggle="popover"  data-bs-content="sent!" data-bs-placement="right" data-bs-trigger="focus" data-bs-offset="5,10">
+    <button type="button" class="btn fs-4 mb-4" data-bs-toggle="modal" data-bs-target="#myModal">
+      Submit inquiry
+    </button>
+  </span>
+  </span>
+  
+<div class="modal fade" id="myModal1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Submitted Successfully</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body fs-5 text-capitalize">
+        your inquiry has been submitted successfully
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn  fs-3" data-bs-dismiss="modal">ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+<textarea class="container-fluid  form-control  fs-4 rounded-3 ps-4" rows="5" placeholder="Write your inquiry" id="comment" name="text"></textarea>
+</div>
+ </section>
+<!-- ///////////////////////// -->
+<section class="write border-1 border-start border-bottom py-4  rounded-2">
+  <h2 class=" rounded-4 p-5  fw-bold  text-center text-capitalize display-4">patient reviews</h2>
+<div class="container-fluid p-3 border-start border-bottom border-3 rounded-3">
+<p>  <span class=" text-dark fs-3">Share your experience with us </span>
+<a class="text-decoration-none fs-3 text-capitalize text-secondary" href="#"> press here</a></p>
+<span class="fs-4" data-bs-toggle="tooltip" title="Send a request!" data-bs-placement="right" data-bs-trigger="hover" data-bs-offset="5,10">
+  <span data-bs-toggle="popover"  data-bs-content="sent!" data-bs-placement="right" data-bs-trigger="focus" data-bs-offset="5,10">
+    <button type="button" class="btn fs-4 mb-4" data-bs-toggle="modal" data-bs-target="#myModal">
+      submit review
+    </button>
+  </span>
+  </span>
+  
+<div class="modal fade" id="myModal2">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">submitted Successfully</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body fs-5 text-capitalize">
+        your review has been submitted successfully
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn  fs-3" data-bs-dismiss="modal">ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+<textarea class="container-fluid  form-control  fs-4 rounded-3 ps-4" rows="5" placeholder="Share your experience" id="comment" name="text"></textarea>
+</div>
+ </section>
+<!-- /////////////////////////// -->
+ <section class="mt-4">
+  <div class="container-fluid bg" style="background-image: url(Images/blurred.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; height: 50vh;"></div>
+ </section>
+ <!-- ///////////////// -->
+  <section class="popular pb-4">
+    <h2 class="rounded-1 p-4  fw-bold  text-center text-capitalize display-4">popular eye treatments</h2>
+  <div class="allcards container mt-5">
+    <div class="row  d-flex flex-lg-row justify-content-lg-between flex-column align-items-center">
+      <div class="col-lg-3 col-md-5   card shadow-lg rounded-md-3 pop-card" >
+        <img class="card-img-top" style="height: 400px;"  src="Images/lasik.jpg" alt="lasik">
+        <div class="card-body d-flex justify-content-between align-items-start">
+          <div>
+            <h4 class="card-title text-uppercase">lasik</h4>
+            <p class="card-text text-capitalize ">achieve clear vision.</p>  
+          </div>
+           <a href="#" class="btn ">Learn More</a>
+        </div><!-- /card-body -->
+      </div><!-- /col -->
+      <div class="col-lg-3 col-md-5  mt-lg-0 mt-5 card shadow-lg rounded-md-3 pop-card" >
+        <img class="card-img-top" style="height: 400px;" src="Images/cataract.jpg" alt="lasik">
+        <div class="card-body d-flex justify-content-between align-items-start">
+         <div>
+          <h4 class="card-title text-uppercase">cataract</h4>
+          <p class="card-text text-capitalize">remove cataracts</p>
+         </div>
+           <a href="#" class="btn ">Learn More</a>
+        </div><!-- /card-body -->
+      </div><!-- /col -->
+      <div class="col-lg-3 col-md-5   mt-lg-0 mt-5 card shadow-lg rounded-md-3 pop-card" >
+        <img class="card-img-top" style="height: 400px;" src="Images/gluc.jpg" alt="lasik">
+        <div class="card-body d-flex justify-content-between align-items-start">
+          <div>
+            <h4 class="card-title text-uppercase">glaucoma</h4>
+            <p class="card-text text-capitalize">control glaucoma</p>
+           
+          </div>
+           <a href="#" class="btn ">Learn More</a>
+        </div><!-- /card-body -->
+      </div><!-- /col -->
+   </div><!-- /row -->
+  
+    
+    <div class="row mt-5 d-flex flex-lg-row justify-content-lg-between flex-column align-items-center">
+    <div class="col-lg-3 col-md-5   mt-lg-0 mt-5 card shadow-lg rounded-md-3 pop-card" >
+      <img class="card-img-top"  src="Images/ped.jpg" style="height: 400px;" alt="pediatric">
+      <div class="card-body d-flex justify-content-between align-items-start">
+        <div>
+          <h4 class="card-title text-uppercase">pediatric</h4>
+          <p class="card-text text-capitalize">tailored for child</p>  
+        </div>
+         <a href="#" class="btn ">Learn More</a>
+      </div><!-- /card-body -->
+    </div><!-- /col -->
+    <div class="col-lg-3  col-md-5  mt-lg-0 mt-5 card shadow-lg rounded-md-3 pop-card" >
+      <img class="card-img-top" style="height: 400px;" src="Images/dry.jpg" alt="lasik">
+      <div class="card-body d-flex justify-content-between align-items-start">
+       <div>
+        <h4 class="card-title text-uppercase">dry eye</h4>
+        <p class="card-text text-capitalize">relief of dryness text.</p>
+       </div>
+         <a href="#" class="btn ">Learn More</a>
+      </div><!-- /card-body -->
+    </div><!-- /col -->
+    <div class="col-lg-3 col-md-5  mt-lg-0 mt-5 card shadow-lg rounded-md-3 pop-card" >
+      <img class="card-img-top" style="height: 400px;" src="Images/man.jpg" alt="lasik">
+      <div class="card-body d-flex justify-content-between align-items-start">
+        <div>
+          <h4 class="card-title text-uppercase">diabetic eye</h4>
+          <p class="card-text text-capitalize">protect your vision</p>
+         
+        </div>
+         <a href="#" class="btn ">Learn More</a>
+      </div><!-- /card-body -->
+    </div><!-- /col -->
+ </div><!-- /row -->
+
+ <div class="row mt-5 d-flex justify-content-lg-around flex-lg-row  flex-column align-items-center">
+  <div class="col-lg-3  col-md-5  mt-lg-0 mt-5 card shadow-lg rounded-md-3 pop-card" >
+    <img class="card-img-top" style="height: 400px;" src="Images/lens.jpg" alt="lasik">
+    <div class="card-body d-flex justify-content-between align-items-start">
+      <div>
+        <h4 class="card-title text-uppercase">eye lens</h4>
+        <p class="card-text text-capitalize">customize lens</p>  
+      </div>
+       <a href="#" class="btn ">Learn More</a>
+    </div><!-- /card-body -->
+  </div><!-- /col -->
+  <div class="col-lg-3 col-md-5   mt-lg-0 mt-5 card shadow-lg rounded-md-3 pop-card" >
+    <img class="card-img-top" style="height: 400px;" src="Images/retina.jpg" alt="lasik">
+    <div class="card-body d-flex justify-content-between align-items-start">
+     <div>
+      <h4 class="card-title text-uppercase">retina</h4>
+      <p class="card-text text-capitalize">protect your retina</p>
+     </div>
+       <a href="#" class="btn ">Learn More</a>
+    </div><!-- /card-body -->
+  </div><!-- /col -->
+</div><!-- /row -->
+  </div><!-- /allcards -->
+  </section>
+  <!-- /////////////////////////// -->
+ <section class=" border-bottom pb-4">
+  <div class="container-fluid" style="background-image: url(Images/blurred.jpg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; height: 50vh;"></div>
+ </section>
+ <!-- ///////////////// -->
+<section class="thanks py-4 border-bottom">
+  <h2 class="  p-5 rounded-4 fw-bold  text-center text-uppercase display-4">thanks for</h2>
+<div class="container ">
+  <div class="mt-5 row d-flex  flex-lg-row flex-column justify-content-lg-between  align-items-center ">
+    <div style="height: 500px;" class="rounded-5 doctor  card overflow-hidden col-lg-3 col-8 col-md-5 p-0  text-white position-relative" >
+      <img class="rounded-5 card-img  h-100"  src="Images/omar.jpg" alt="Card image">
+      <div class="card-img-overlay  bg-dark bg-opacity-75 d-flex flex-column justify-content-between ">
+        <div class="doc-thx mt-3 ms-2">
+          <h4 class="card-title text-capitalize">all thanks & appretiation</h4>
+          <p class="card-text text-white"><i class="fa-regular fa-clock"></i> November 18,2024 </p>  
+        </div><!-- /doc-thx -->
+        <div class="doc-info mb-3 ms-2 ">
+           <img class="w-50 h-75 rounded-circle" src="Images/omar.jpg" alt="">
+        <p class="text-white text-capitalize fs-5">dr moh omar</p>
+           <p class="doc text-white text-capitalize fs-5">opthalmist</p>
+          </div><!-- /doc-info -->
+        
+      </div><!-- /overlay -->
+    </div><!-- /card -->
+    
+  
+    <div style="height: 500px;" class="rounded-5 doctor  card overflow-hidden mt-lg-0 mt-5 col-lg-3 col-md-5 col-8 p-0  text-white position-relative" >
+      <img class="rounded-5 card-img  h-100"  src="Images/mogh.jpg" alt="Card image">
+      <div class="card-img-overlay  bg-dark bg-opacity-75 d-flex flex-column justify-content-between ">
+        <div class="doc-thx mt-3 ms-2">
+          <h4 class="card-title text-capitalize">all thanks & appretiation</h4>
+          <p class="card-text text-white"><i class="fa-regular fa-clock"></i> November 18,2024 </p>  
+        </div><!-- /doc-thx -->
+        <div class="doc-info mb-3 ms-2 ">
+           <img class="w-50 h-75 rounded-circle" src="Images/mogh.jpg" alt="">
+        <p class="text-white text-capitalize fs-5">dr moh moghazy</p>
+           <p class="doc text-white text-capitalize fs-5">opthalmist</p>
+          </div><!-- /doc-info -->
+        
+      </div><!-- /overlay -->
+    </div><!-- /card -->
+    
+    <div style="height: 500px;" class="rounded-5 doctor  card overflow-hidden mt-lg-0 mt-5 col-lg-3 col-8 col-md-5 p-0  text-white position-relative" >
+      <img class="rounded-5 card-img  h-100"  src="Images/ah.jpg" alt="Card image">
+      <div class="card-img-overlay  bg-dark bg-opacity-75 d-flex flex-column justify-content-between ">
+        <div class="doc-thx mt-3 ms-2">
+          <h4 class="card-title text-capitalize">all thanks & appretiation</h4>
+          <p class="card-text text-white"><i class="fa-regular fa-clock"></i> November 18,2024 </p>  
+        </div><!-- /doc-thx -->
+        <div class="doc-info mb-3 ms-2 ">
+           <img class="w-50 h-75 rounded-circle" src="Images/ah.jpg" alt="">
+        <p class="text-white text-capitalize fs-5">dr ahmed mokhtar</p>
+           <p class="doc text-white text-capitalize fs-5">opthalmist</p>
+          </div><!-- /doc-info -->
+        
+      </div><!-- /overlay -->
+    </div><!-- /card -->
+    
+  
+  </div><!-- /row -->
+</div>
+  
+</section>
+
+<!-- /////////////////////////////// -->
+ <section class="updates py-4">
+  
+  <h2 class="  mb-5  fw-bold bg-white  text-center text-uppercase display-4">insightful episodes </h2>
+<div class="container d-flex flex-column justify-content-between align-items-center">
+  <div class="col-12 col-md-10 updatecard shadow-lg rounded-4  d-flex flex-lg-row justify-content-lg-between flex-column-reverse">
+    <div class="p-lg-5  p-3">
+      <h3 class="fw-medium display-6  text-capitalize">understanding cataracts</h3>
+      <i class="fa-solid fa-calendar-days"></i>
+      <span class="fs-5">July5,2024</span>
+      <div class="line my-2" style="width: 80px; height: 2px; background-color: black;" ></div>
+      <p class="fs-4">This episode covers what cataracts are, their causes, symptoms, and the latest treatment options available. Perfect for patients wanting to learn more about cataract surgery and how it can improve vision.</p>
+      <div class="btn-group mt-4">
+        <button type="button" class="btn fs-5 me-2"><i class="fa-solid fa-microphone"></i> Podcast</button>
+        <button type="button" class="btn  fs-5 me-2"><i class="fa-solid fa-clock"></i> 7 mins</button>
+        <button type="button" class="btn fs-5 "><i class="fa-solid fa-play"></i> Play Episode</button>
+      </div><!-- /btn -->    
+    </div><!-- /text -->
+    <img  class="u-img rounded-end-4 " src="Images/sqcat.jpg" alt="cataract">
+  </div><!-- /card -->
+  
+  <div class="updatecard col-md-10 mt-5 shadow-lg rounded-4  d-flex flex-lg-row flex-lg-row-reverse justify-content-lg-between flex-column-reverse">
+    <div class=" p-lg-5 p-3 w-lg-75">
+      <h3 class="fw-medium display-6 text-capitalize">Digital Eye Strain</h3>
+      <i class="fa-solid fa-calendar-days"></i>
+      <span class="fs-5">July5,2024</span>
+      <div class="line my-2" style="width: 80px; height: 2px; background-color: black;" ></div>
+      <p class="fs-4">Learn about digital eye strain, its symptoms, and simple exercises or lifestyle changes to reduce strain from prolonged screen time. Listen and you will acquire more knowledge.</p>
+      <div class="btn-group mt-4">
+        <button type="button" class="btn fs-5 me-2"><i class="fa-solid fa-microphone"></i> Podcast</button>
+        <button type="button" class="btn  fs-5 me-2"><i class="fa-solid fa-clock"></i> 5 mins</button>
+        <button type="button" class="btn fs-5 "><i class="fa-solid fa-play"></i> Play Episode</button>
+      </div><!-- /btn -->
+      
+    </div><!-- /text -->
+    <img  class="u-img2 rounded-start-4 " src="Images/strain.jpg" alt="image">
+  </div><!-- /card -->
+  
+  <div class="updatecard  col-md-10 shadow-lg rounded-4 mt-5 d-flex flex-lg-row justify-content-lg-between flex-column-reverse">
+    <div class="p-lg-5 p-3 ">
+      <h3 class="fw-medium display-6 text-capitalize">Early Detectng Glaucoma</h3>
+      <i class="fa-solid fa-calendar-days"></i>
+      <span class="fs-5">July5,2024</span>
+      <div class="line my-2" style="width: 80px; height: 2px; background-color: black;" ></div>
+      <p class="fs-4">Understand the importance of early detection and treatment for glaucoma, a condition that can lead to vision loss if left untreated. Listen and you will acquire more knowledge.</p>
+      <div class="btn-group mt-4">
+        <button type="button" class="btn fs-5 me-2"><i class="fa-solid fa-microphone"></i> Podcast</button>
+        <button type="button" class="btn  fs-5 me-2"><i class="fa-solid fa-clock"></i> 7 mins</button>
+        <button type="button" class="btn fs-5 "><i class="fa-solid fa-play"></i> Play Episode</button>
+      </div><!-- /btn -->
+      
+    </div><!-- /text -->
+    <img  class="u-img rounded-end-4 " src="Images/sqglu.jpg" alt="image">
+  </div><!-- /card -->
+ 
+  <div class="updatecard col-md-10 mt-5  shadow-lg rounded-4  d-flex flex-lg-row flex-lg-row-reverse justify-content-lg-between flex-column-reverse">
+    <div class="p-lg-5 p-3 ">
+      <h3 class="fw-medium display-6 text-capitalize">Eye Health for Children</h3>
+      <i class="fa-solid fa-calendar-days"></i>
+      <span class="fs-5">July5,2024</span>
+      <div class="line my-2" style="width: 80px; height: 2px; background-color: black;" ></div>
+      <p class="fs-4">Discover key tips for protecting children’s eyesight, from reducing screen time to scheduling regular eye exams. Listen and you will acquire more knowledge and take care for your children.</p>
+      <div class="btn-group mt-4">
+        <button type="button" class="btn fs-5 me-2"><i class="fa-solid fa-microphone"></i> Podcast</button>
+        <button type="button" class="btn  fs-5 me-2"><i class="fa-solid fa-clock"></i> 4 mins</button>
+        <button type="button" class="btn fs-5 "><i class="fa-solid fa-play"></i> Play Episode</button>
+      </div><!-- /btn -->
+      
+    </div><!-- /text -->
+    <img  class="u-img2 rounded-start-4 " src="Images/ped.jpg" alt="image">
+  </div><!-- /card -->
+  
+</div> <!-- /container -->
+</section>
+<!-- ///////////////////////////////// -->
+ <section class="join pb-4">
+  <h2 class="  mb-4  fw-bold bg-white text-center text-uppercase display-4">clinic network </h2> 
+<div class="container">
+  <div class=" row  d-flex flex-lg-row justify-content-lg-between flex-column align-items-center">
+    <div style="height: 220px;" class="mt-4 mt-lg-0 updatecar rounded-4 col-lg-2 col-7  col-md-3 p-4 text-center shadow-lg">
+        <h5 class="text-capitalize fs-3  mb-3 fw-bold">connect</h5>
+        <i class="fa-brands fa-whatsapp btn   rounded-3  border-0 mb-3 fs-1 p-3 j-icon"></i>
+       <a href="#" class="text-decoration-none"><p class="fs-4 fw-medium">Quik Help</p></a>
+    </div><!-- /card -->
+  
+    <div style="height: 220px;" class="mt-4 mt-lg-0 updatecar rounded-4 col-lg-2 col-7 col-md-3 p-4 text-center shadow-lg">
+      <h5 class="text-capitalize fs-3  mb-3 fw-bold">inspire</h5>
+      <i class="fa-brands fa-instagram btn   rounded-3  border-0  fs-1 p-3 j-icon"></i>
+      <a href="#" class="text-decoration-none"><p class="fs-4 fw-medium">Eye Care</p></a>
+  </div><!-- /card -->
+
+  <div style="height: 220px;" class="mt-4 mt-lg-0 updatecar rounded-4 col-lg-2  col-7 col-md-3 p-4 text-center shadow-lg">
+    <h5 class="text-capitalize fs-3  mb-3 fw-bold">follow</h5>
+    <i class="fa-brands fa-twitter btn   rounded-3  border-0 mb-3 fs-1 p-3 j-icon"></i>
+    <a href="#" class="text-decoration-none"><p class="fs-4 fw-medium">Latest News</p></a>
+</div><!-- /card -->
+
+<div style="height: 220px;" class="mt-4 mt-lg-0 updatecar rounded-4 col-lg-2 col-7 col-md-3 p-4 text-center shadow-lg">
+  <h5 class="text-capitalize fs-3  mb-3 fw-bold">network</h5>
+  <i class="fa-brands fa-linkedin-in btn   rounded-3  border-0 mb-3 fs-1 p-3 j-icon"></i>
+ <a href="#" class="text-decoration-none"><p class="fs-4 fw-medium">Trusted Info</p></a> 
+</div><!-- /card -->
+</div><!-- /row -->
+</div><!-- /container -->
+ </section>
+ <!-- //////////////////// -->
+ <footer class="container-fluid pb-4 ">
+  <div class="row w-100 d-flex flex-lg-row justify-content-lg-between flex-column align-items-stretch">
+    <div class="col-lg-4">
+      <div class="head border-top border-bottom border-3 py-3 d-flex align-items-center justify-content-center">
+        <img src="Images/logo2.png" alt="logo" style="width: 70px; height: 70px;" class="rounded-circle">
+        <span class="text-capitalize fs-3">clinic information</span>
+      </div>
+      <div class="text-center py-4 d-flex flex-column align-items-center justify-content-center">
+        <p class="fs-5"><i class="fa-solid fa-file-signature"></i> PureSight Eye Clinic</p>
+        <p class="fs-5"><i class="fa-solid fa-comment-medical"></i> Opthalmic eye Clinic</p>
+        <p class="fs-5"><i class="fa-solid fa-location-dot"></i> 9st, OctoberCity, Egypt</p>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="head border-top border-bottom border-3 py-3 d-flex align-items-center justify-content-center">
+        <img src="Images/logo2.png" alt="logo" style="width: 70px; height: 70px;" class="rounded-circle">
+        <span class="text-capitalize fs-3">Contact Details</span>
+      </div>
+      <div class="text-center py-4 d-flex flex-column align-items-center justify-content-center">
+        <p class="fs-5"><i class="fa-solid fa-phone-volume"></i> +123 456 7890</p>
+        <p class="fs-5"><i class="fa-solid fa-envelope"></i> contact@puresight.com</p>
+        <p class="fs-5"><i class="fa-solid fa-hourglass-start"></i> Mon - Fri: 8:00AM to 6:00PM</p>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="head border-top border-bottom border-3 py-3 d-flex align-items-center justify-content-center">
+        <img src="Images/logo2.png" alt="logo" style="width: 70px; height: 70px;" class="rounded-circle">
+        <span class="fs-3 text-capitalize">Vision Statement</span>
+      </div>
+      <div class="text-center py-4 d-flex flex-column align-items-center justify-content-center">
+        <p class="fs-5">Providing comprehensive</p>
+        <p class="fs-5">Personalized eye care</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row py-4 text-center border-3 border-top border-bottom">
+    <p class="fs-lg-5 m-0">&copy; COPYRIGHT &copy; 2024 PureSight. All rights reserved.</p>
+  </div>
+</footer>
+<!-- ///////////////////////////// -->
+ <section style="top: 170px; right: 20px; z-index: 1000;" class="todo position-fixed d-flex flex-column">
+   <i class="fa-brands fa-facebook-f btn   rounded-3  border-0 mb-3 fs-1 p-3 f-icon"></i>
+   <i class="fa-brands fa-whatsapp btn   rounded-3  border-0 mb-3 fs-1 p-3 f-icon"></i>
+   <i class="fa-brands fa-twitter btn   rounded-3  border-0 mb-3 fs-1 p-3 f-icon"></i>
+   <i class="fa-brands fa-linkedin-in btn   rounded-3  border-0 mb-3 fs-1 p-3 f-icon"></i>
+   <i class="fa-brands fa-instagram btn   rounded-3  border-0  fs-1 p-3 f-icon"></i>
+
+ </section>
+ <script  src="js/bootstrap.bundle.min.js"></script>
+  <script>
+ 
+   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+     return new bootstrap.Tooltip(tooltipTriggerEl);
+   });
+
+ 
+   var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+   var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+     return new bootstrap.Popover(popoverTriggerEl);
+   });
+   document.addEventListener("click", function(event) {
+    var menu = document.querySelectorAll(".dropdown-menu li a")
+    var link = document.querySelector(".dropdown-toggle")
+    var clicked = false
+    menu.forEach(function(item){
+      if (item == event.target){
+        clicked = true
+      }
+    })
+      if (clicked) {
+        link.classList.add('change')
+      }else {
+        link.classList.remove('change')
+      }
+    
+   })
+ </script>
+</body>
+</html>
