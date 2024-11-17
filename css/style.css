@@ -72,22 +72,6 @@ p {
 .doctor:hover .doc-thx {
   transform: translateY(25px);
 }
-@media (max-width: 768px) {
-  .u-img,.u-img2 {
-    clip-path: none;
-    height: 200px;
-    width: 100%;
-  }
-  .updatecard {
-    height: 500px;
-  }
-  .updatecard .p-lg-5 {
-    overflow: hidden;
-  }
-  .updatecard:hover img {
-    transform: scale(1);
-  }
-}
 .f-icon , .j-icon {color: white;}
 .f-icon {
   background-color: #048ef7;
@@ -105,6 +89,12 @@ p {
   font-size: 22px;
 
 }
+.tooltip {
+  z-index: 1051;
+}
+.popover {
+  z-index: 1050;
+}
 .popover-body {
   background-color: white;
   }
@@ -112,7 +102,7 @@ p {
   display: none;
 }
 .tooltip-inner {
-  background-color: rgba(179, 212, 250, 0.7);
+  background-color: rgba(179, 212, 250, 1);
 }
 .updatecard:hover .p-lg-5 .line {
   animation: grow 1s forwards linear;
@@ -129,3 +119,41 @@ p {
 .updatecard {overflow: hidden;}
 .updatecard img {transition: 0.5s;}
 .updatecard:hover img {transform: scale(1.05);}
+@media (max-width: 768px) {
+  .u-img,.u-img2 {
+    clip-path: none;
+    height: 200px;
+    width: 100%;
+  }
+  .updatecard {
+    height: 500px;
+  }
+  .updatecard .p-lg-5 {
+    overflow: hidden;
+  }
+  .updatecard:hover img {
+    transform: scale(1);
+  }
+  .updatecard:hover img {transform: scale(1);}
+  .updatecard:hover .p-lg-5 .line {
+    animation: none;  
+}
+.alert-s button {
+  background-color: rgb(33, 37, 41);
+  color: white;
+}
+.alert-s p {
+  color: white;
+}
+.aler-d {
+  transform: translateY(200px)  !important
+}
+.alert-s {
+  background-color: rgb(33, 37, 41);
+  color: white; 
+}  
+.aler-c {
+  border-radius: 15px;
+  overflow: hidden;
+} 
+}
